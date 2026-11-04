@@ -29,7 +29,7 @@ HyDE on a bare CachyOS install (no desktop environment), plus my own keybindings
 You need CachyOS with HyDE already installed and working.
 
 ```
-git clone https://github.com/YOURNAME/hyde-dotfiles
+git clone https://github.com/UntitledBro1/hyde-dotfiles
 cd hyde-dotfiles
 ./install.sh
 ```
@@ -47,7 +47,7 @@ Paste this repo's link into your coding agent and ask it to install the dots. Fo
 1. Confirm HyDE is installed: `command -v hyde-shell` should succeed. Stop if it doesn't.
 2. Clone and run the installer without the prompt:
    ```
-   git clone https://github.com/YOURNAME/hyde-dotfiles ~/hyde-dotfiles
+   git clone https://github.com/UntitledBro1/hyde-dotfiles ~/hyde-dotfiles
    ~/hyde-dotfiles/install.sh --yes
    ```
 3. Tell the user where the backup folder is (the installer prints it).
