@@ -3,8 +3,7 @@
 **My CachyOS + Hyprland desktop, ready to install.**
 HyDE on a bare CachyOS install (no desktop environment), plus my own keybindings, bar, theme and terminal config.
 
-<!-- Add a screenshot: docs/screenshot.webp, then uncomment -->
-<!-- ![Desktop](docs/screenshot.webp) -->
+![Desktop](docs/screenshot.png)
 
 ## What you get
 
