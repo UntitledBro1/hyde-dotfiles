@@ -1,18 +1,17 @@
 # My HyDE Dotfiles
 
 **My CachyOS + Hyprland desktop, ready to install.**
-HyDE on a bare CachyOS install (no desktop environment), plus my own keybindings, bar, theme and terminal config.
+HyDE on a bare CachyOS install (no desktop environment), in the Rosé Pine theme with a sakura wallpaper.
 
 ![Desktop](docs/screenshot.png)
 
 ## What you get
 
-<!-- Fill these in with your own highlights. Examples: -->
-- **Bar.** Waybar layout: *describe yours*
-- **Launcher and menus.** Rofi and wlogout styling: *describe yours*
-- **Theme.** *Theme name* by *author*. Install with `hyde-shell theme import` (see Themes)
-- **Terminal.** Kitty and fastfetch setup: *describe yours*
-- **Keybindings.** *anything non-default worth mentioning*
+- **Theme.** Rosé Pine, built into HyDE. Dark plum with soft red accents, and colors that follow the wallpaper through Wallbash.
+- **Bar.** Waybar across the top.
+- **Launcher.** A Rofi app grid with icons and a banner image.
+- **Terminal.** Kitty with a fastfetch card showing system info.
+- **Files.** Dolphin, themed to match through Kvantum and qt6ct.
 
 ## What's in here
 
@@ -30,7 +29,7 @@ You need CachyOS with HyDE already installed and working.
 ```
 git clone https://github.com/UntitledBro1/hyde-dotfiles
 cd hyde-dotfiles
-./install.sh
+bash install.sh
 ```
 
 The script lists what it will change and asks once. Everything it replaces is copied to `~/.config/hyde-dotfiles-backup/<time>/` first. It skips `monitors.conf` and `nvidia.conf` because those belong to the machine; add `--with-machine` if you want them too.
@@ -47,35 +46,34 @@ Paste this repo's link into your coding agent and ask it to install the dots. Fo
 2. Clone and run the installer without the prompt:
    ```
    git clone https://github.com/UntitledBro1/hyde-dotfiles ~/hyde-dotfiles
-   ~/hyde-dotfiles/install.sh --yes
+   bash ~/hyde-dotfiles/install.sh --yes
    ```
 3. Tell the user where the backup folder is (the installer prints it).
 
 Don't copy files into `~/.config` by hand or edit `monitors.conf`. The installer backs up everything it replaces; hand edits skip that.
 
-## Themes
+## Theme and wallpaper
 
-<!-- List the themes you use. HyDE can import one from its repo: -->
-- *Theme name* by *author*: `hyde-shell theme import` then follow the prompt, or use the theme's own install instructions.
+Select **Rosé Pine** in HyDE's theme picker (`Super + Shift + T`). It ships with HyDE, so there is nothing to import.
 
-Themes and wallpapers belong to their creators.
+The wallpaper in the screenshot (`burning_cherry.jpeg`) is not included in this repo. Use any wallpaper you like and Wallbash will recolor the desktop to match.
 
 ## Make it yours
 
-- **Keybindings and window rules:** `~/.config/hypr/keybindings.conf` and `windowrules.conf` (or your Lua modules under `~/.config/hypr/lua/` on the new layout).
-- **HyDE options:** `~/.config/hyde/config.toml`.
-- **Bar:** `~/.config/waybar/`, switch layouts with `hyde-shell waybar`.
+- **Hyprland settings and keybindings:** `~/.config/hypr/hyprland.lua`
+- **HyDE options:** `~/.config/hyde/config.toml`
+- **Bar:** `~/.config/waybar/`
 
 ## Keeping it up to date
 
 After you change your setup, snapshot it and push:
 
 ```
-./collect.sh
+bash collect.sh
 git add -A && git commit -m "update" && git push
 ```
 
-`collect.sh` also scans for lines that look like API keys or passwords. Read what it prints before you push.
+`collect.sh` also scans for lines that look like API keys or passwords. The two "Password:" hits in the hyprlock files are just label text.
 
 ## Undo
 
@@ -88,16 +86,16 @@ hyde-shell reload && hyprctl reload
 
 ## Notes
 
+- Built and used on CachyOS. Other setups are untested.
 - HyDE is moving from `.conf` files to a Lua-based Hyprland config. `paths.txt` lists both layouts and skips whichever you don't have.
-- Built and used on *your hardware*, CachyOS, HyDE *version/commit*. Other setups are untested.
-- Updating HyDE can overwrite some files it manages. Re-run `./install.sh` afterwards if something reverts.
+- Updating HyDE can overwrite some files it manages. Re-run `bash install.sh` afterwards if something reverts.
 
 ## Credits
 
 - [HyDE](https://github.com/HyDE-Project/HyDE) by the HyDE Project, MIT licensed.
 - Install flow modelled on [denonmaryland/omarchy-dotfiles](https://github.com/denonmaryland/omarchy-dotfiles).
-- Themes and wallpapers belong to their creators.
+- Rosé Pine palette and wallpapers belong to their creators.
 
 ## License
 
-MIT. Add a `LICENSE` file (GitHub offers one when you create the repo).
+MIT. See `LICENSE`.
