@@ -1,13 +1,13 @@
 # My HyDE Dotfiles
 
 **My CachyOS + Hyprland desktop, ready to install.**
-HyDE on a bare CachyOS install (no desktop environment), in the Rosé Pine theme with a sakura wallpaper.
+HyDE on a bare CachyOS install (no desktop environment), in the Catppuccin Mocha theme.
 
 ![Desktop](docs/screenshot.png)
 
 ## What you get
 
-- **Theme.** Rosé Pine, built into HyDE. Dark plum with soft red accents, and colors that follow the wallpaper through Wallbash.
+- **Theme.** Catppuccin Mocha, built into HyDE. Dark with soft pastel accents, and colors that follow the wallpaper through Wallbash.
 - **Bar.** Waybar across the top.
 - **Launcher.** A Rofi app grid with icons and a banner image.
 - **Terminal.** Kitty with a fastfetch card showing system info.
@@ -54,9 +54,9 @@ Don't copy files into `~/.config` by hand or edit `monitors.conf`. The installer
 
 ## Theme and wallpaper
 
-Select **Rosé Pine** in HyDE's theme picker (`Super + Shift + T`). It ships with HyDE, so there is nothing to import.
+Select **Catppuccin Mocha** in HyDE's theme picker (`Super + Shift + T`). It ships with HyDE, so there is nothing to import.
 
-The wallpaper in the screenshot (`burning_cherry.jpeg`) is not included in this repo. Use any wallpaper you like and Wallbash will recolor the desktop to match.
+Use any wallpaper you like and Wallbash will recolor the desktop to match.
 
 ## Make it yours
 
@@ -94,7 +94,7 @@ hyde-shell reload && hyprctl reload
 
 - [HyDE](https://github.com/HyDE-Project/HyDE) by the HyDE Project, MIT licensed.
 - Install flow modelled on [denonmaryland/omarchy-dotfiles](https://github.com/denonmaryland/omarchy-dotfiles).
-- Rosé Pine palette and wallpapers belong to their creators.
+- Catppuccin palette and wallpapers belong to their creators.
 
 ## License
 
