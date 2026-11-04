@@ -1,0 +1,44 @@
+# Everything collect.sh copies into ./home and install.sh puts back.
+# Paths are relative to $HOME. No spaces in paths. Missing paths are skipped.
+# Prefix with "machine" for hardware-specific files (only used with --with-machine).
+
+# --- HyDE core ---
+.config/hyde/config.toml
+.config/hyde/wallbash
+# .config/hyde/themes            # imported themes + wallpapers: can be big. Prefer `hyde-shell theme import` from the theme's own repo.
+
+# --- Hyprland: legacy .conf layout ---
+.config/hypr/userprefs.conf
+.config/hypr/keybindings.conf
+.config/hypr/windowrules.conf
+.config/hypr/hypridle.conf
+.config/hypr/hyprlock.conf
+.config/hypr/hyprlock
+
+# --- Hyprland: new Lua layout ---
+.config/hypr/hyprland.lua
+.config/hypr/lua
+
+# --- Bar, launcher, notifications, terminal ---
+.config/waybar
+.config/rofi
+.config/dunst
+.config/wlogout
+.config/kitty
+.config/fastfetch
+
+# --- Theming ---
+.config/Kvantum
+.config/qt5ct
+.config/qt6ct
+.config/nwg-look
+.config/xsettingsd
+
+# --- Shell (uncomment what you use) ---
+# .zshrc
+# .p10k.zsh
+# .config/fish
+
+# --- Machine specific ---
+machine .config/hypr/monitors.conf
+machine .config/hypr/nvidia.conf

@@ -1,0 +1,9 @@
+# secrets and junk that should never be committed
+*.key
+*.pem
+.env
+**/secrets*
+**/*token*
+**/*.log
+home/.config/hyde/themes/*/cache
+**/__pycache__/
