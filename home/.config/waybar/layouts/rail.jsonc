@@ -1,0 +1,73 @@
+{
+  "layer": "top",
+  "position": "left",
+  "exclusive": false,
+  "passthrough": false,
+  "width": 44,
+  "margin": "0",
+  "spacing": 0,
+  "reload_style_on_change": true,
+
+  "on-sigusr1": "hide",
+  "on-sigusr2": "show",
+
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["tray", "pulseaudio", "backlight", "bluetooth", "network", "battery"],
+
+  "hyprland/workspaces": {
+    "format": "{id}",
+    "all-outputs": true,
+    "on-scroll-up": "hyprctl dispatch workspace e-1",
+    "on-scroll-down": "hyprctl dispatch workspace e+1"
+  },
+
+  "clock": {
+    "format": "{:%H\n%M}",
+    "tooltip-format": "{:%A, %d %B %Y}"
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 4
+  },
+
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-muted": "\uf026",
+    "format-icons": { "default": ["\uf027", "\uf027", "\uf028"] },
+    "tooltip-format": "Volume: {volume}%",
+    "scroll-step": 5
+  },
+
+  "backlight": {
+    "format": "\uf185",
+    "tooltip-format": "Brightness: {percent}%",
+    "on-scroll-up": "brightnessctl set 5%+",
+    "on-scroll-down": "brightnessctl set 5%-"
+  },
+
+  "bluetooth": {
+    "format": "\uf293",
+    "format-off": "\uf294",
+    "format-disabled": "\uf294",
+    "tooltip-format": "Bluetooth: {status}"
+  },
+
+  "network": {
+    "format-wifi": "\uf1eb",
+    "format-ethernet": "\uf0e8",
+    "format-disconnected": "\uf127",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "{ifname}",
+    "tooltip-format-disconnected": "Disconnected"
+  },
+
+  "battery": {
+    "format": "{icon}",
+    "format-charging": "\uf0e7",
+    "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"],
+    "tooltip-format": "{capacity}% ({timeTo})",
+    "states": { "warning": 25, "critical": 10 }
+  }
+}

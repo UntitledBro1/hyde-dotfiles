@@ -46,10 +46,15 @@ end
 hl.config({
     general = {
         gaps_out = 0,
-        gaps_in = 2,
+        gaps_in = 1,
         gaps_workspaces = 0,
     },
     decoration = {
         rounding = 0,
     },
 })
+
+-- Start the auto-hide helper for the left Waybar rail
+hl.on("hyprland.start", function()
+    hl.exec_cmd("sleep 5 && $HOME/.config/hypr/scripts/waybar_auto_hide --always-hidden")
+end)

@@ -1,0 +1,68 @@
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+window#waybar {
+  background: alpha(@main-bg, 0.72);
+  border-right: 1px solid alpha(@main-fg, 0.18);
+}
+
+#workspaces button {
+  padding: 6px 0;
+  color: @main-fg;
+  background: transparent;
+}
+
+#workspaces button.active {
+  background: @wb-act-bg;
+  color: @wb-act-fg;
+}
+
+#workspaces button:hover {
+  background: @wb-hvr-bg;
+  color: @wb-hvr-fg;
+}
+
+#clock,
+#tray,
+#pulseaudio,
+#backlight,
+#bluetooth,
+#network,
+#battery {
+  padding: 8px 0;
+  color: @main-fg;
+  background: transparent;
+}
+
+#pulseaudio:hover,
+#backlight:hover,
+#bluetooth:hover,
+#network:hover,
+#battery:hover {
+  background: @wb-hvr-bg;
+  color: @wb-hvr-fg;
+}
+
+#battery.warning {
+  color: @wb-hvr-fg;
+}
+
+#battery.critical {
+  background: @wb-hvr-bg;
+  color: @main-bg;
+}
+
+tooltip {
+  background: @main-bg;
+  border: 1px solid alpha(@main-fg, 0.3);
+  border-radius: 0;
+}
+
+tooltip label {
+  color: @main-fg;
+}
