@@ -68,3 +68,6 @@ echo "Reloading..."
 hyde-shell reload >/dev/null 2>&1 || true
 hyprctl reload >/dev/null 2>&1 || true
 echo "Done. If anything looks off, log out and back in."
+
+# Restore the saved Waybar layout
+command -v hyde-shell >/dev/null && hyde-shell waybar --set 07 || true
